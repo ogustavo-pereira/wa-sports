@@ -1,20 +1,32 @@
 :root {
-    --orange: #FF9C00;
-    --gray-1: #9B9B9B;
+    --orange: #ff8d00;
+    --gray-1: #dddd;
 }
  
 * {
     font-family: 'Roboto', sans-serif;
 }
-
+.orange {
+    color: var(--orange)!important;
+}
 html,body{
     height:100%;    
     margin:0;
     padding:0;
 }
+
+a {
+    outline: none!important;
+    text-decoration: none;
+}
+a {
+    color: inherit;
+}
+
 .header {
-    background-color: #0B0D11;
-    border-bottom: 1px solid #000;
+    background-color: #101010;
+    border-bottom: 3px solid #000;
+    box-sizing: border-box;
 }
 
 .header .logo {
@@ -24,31 +36,45 @@ html,body{
 .container {
     background-color: #0B0D11;
     display: flex;
-    height: 100%;
     width: 100%;
+    min-height: 100%;
 }
 
 .left-menu {
-    background-color: #171717;
-    height: 100%;
+    background-color: #0B0D11;
+    border-right: 2px solid #000;
     width: 20%;
 }
 
 .menu {
+    background-color:#101010;
     list-style: none;
     padding: 0px;
     margin: 0px;
 }
 
 .menu-item {
-    border-left: 5px solid var(--gray-1);
-    color: white;
+    background-color: #101010;
+    border-left: 5px solid #201f1f;
     padding: 20px;
 }
 
+.menu-item .link {
+    align-items: center;
+    color: #676565;
+    display: flex;
+}
+
+.menu-item .icon {
+    padding-right: 10px;
+    margin-bottom: 2px;
+}
+
 .menu-item.active {
-    background-color: #0B0D11;
-    border-left: 5px solid white;
+    background-color: #000;
+    border-left: 5px solid var(--orange);
+}
+.menu-item.active .link {
     color: var(--orange);
 }
 
@@ -72,4 +98,147 @@ html,body{
 }
 .page-content p,ul {
     margin: 0;
+}
+
+.content__news .title {
+    margin: 10px 0px;
+    padding-left: 20px;
+}
+
+.content__news .news-item {
+    margin: 10px 0px;   
+}
+
+.content__box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.content__box .video-box {
+    width: 50%;
+    height: 450px;
+}
+.content__box .action-box {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #131313;
+    width: 50%;
+    position: relative;
+}
+.content__box .action-box .header{
+    background-color: #131313;
+    color: white;
+    margin-bottom: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.action-box .header .list {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+.action-box .header .list .list-item {
+    padding: 10px;
+}
+
+.panel {
+    align-items: center;
+    display: flex;
+}
+.panel .time__value, .panel .vs, .panel .time__name {
+    color: white;
+    font-weight: bold;
+}
+
+.panel .vs {
+    padding: 0px 20px;
+}
+.panel .time__logo {
+    width: 80px;
+    padding: 10px;
+}
+
+#latest-actions {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.table-striped {
+    background-color: #201F1F;
+    list-style: none;
+    padding: 0px;
+}
+.table-striped li {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.table-striped li:nth-child(2n) {
+    background-color: #131313;
+}
+
+.top-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-info .icon {
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.content__schedule {
+    align-items: center;
+    background-color: #201F1F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.schedule-item  {
+    align-items: center;
+    display: inline-flex;
+    color: white;
+    padding: 16px 20px;
+}
+
+.content__schedule .time__logo{
+    width: 50px;
+    padding: 10px;
+}
+
+.content__schedule .vs,.content__schedule .time__name, .content__schedule .time__value {
+    padding: 10px;
+    font-weight: bold;
+}
+.drop {
+    width: 100%;
+    justify-content: center;
+    background: #101010;
+}
+
+.live-span::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #D13B3B;
+    margin-right: 4px;
+}
+
+.schedule-item.timevstime {
+    min-width: 350px;
 }
