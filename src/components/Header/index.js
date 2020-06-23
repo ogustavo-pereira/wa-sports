@@ -1,6 +1,5 @@
 import React from 'react';
-
-import LOGO from '../../images/wasports.png';
+import LOGO from 'images/wasports.png';
 
 export default function Header() {
 	return (

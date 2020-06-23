@@ -1,6 +1,5 @@
 import React from 'react';
-
-import CSGOICON from '../../images/csgoorange.png';
+import CSGOICON from 'images/csgoorange.png';
 
 export default function CSGO() {
 	return (

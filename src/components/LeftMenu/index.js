@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
-import TVWHITEICON from '../../images/tvwhite.png';
-import CSGOORANGEICON from '../../images/csgoorange.png';
-import TVORANGEICON from '../../images/tv.png';
-import CSWHITEICON from '../../images/csgowhite.png';
+import TVWHITEICON from 'images/tvwhite.png';
+import CSGOORANGEICON from 'images/csgoorange.png';
+import TVORANGEICON from 'images/tv.png';
+import CSWHITEICON from 'images/csgowhite.png';
 
 export default function LeftMenu() {
 	let location = useLocation();
