@@ -7,7 +7,7 @@ import TVORANGEICON from '../../images/tv.png';
 import CSWHITEICON from '../../images/csgowhite.png';
 
 export default function LeftMenu() {
-  let location = useLocation();
+  let navigate = useLocation();
 
   const liveIcon = location.pathname === '/dashboard';
   const csgoIcon = location.pathname === '/csgo';
